@@ -9,7 +9,8 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  padding: 20px 20px 20px 20px;
+  padding: 20px;
+  padding-bottom: 200px;
   transition: filter 0.4s ease;
 }
 
@@ -60,7 +61,7 @@ body {
   }
   
   .valentines {
-    top: 100px;
+    top: 160px;
     left: 0;
     animation: none;
   }
@@ -138,16 +139,6 @@ body {
 
 .container {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-@media (min-width: 768px) {
-  .container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
 }
 
 .from-section {
@@ -155,8 +146,8 @@ body {
   align-items: center;
   justify-content: center;
   gap: 15px;
-  margin-bottom: 60px;
-  margin-top: 20px;
+  margin-bottom: 40px;
+  margin-top: 30px;
   font-family: "Georgia", serif;
   font-size: 36px;
   color: #ffb6c1;
@@ -164,6 +155,8 @@ body {
   order: -1;
   text-transform: uppercase;
   letter-spacing: 2px;
+  position: relative;
+  z-index: 100;
 }
 
 .bear-emoji {
@@ -188,7 +181,7 @@ body {
 
 .valentines {
   position: relative;
-  top: 200px;
+  top: 220px;
   left: 80px;
   cursor: pointer;
   animation: up 3s linear infinite;
@@ -237,9 +230,9 @@ body {
 
 .card.zoomed {
   position: fixed;
-  top: 50%;
+  top: 55%;
   left: 45%;
-  transform: translate(-50%, -50%) scale(2.2);
+  transform: translate(-50%, -50%) scale(1.6);
   z-index: 10000;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
 }
@@ -434,49 +427,6 @@ body {
 }
 
 .shadow {
-  position: absolute;
-  width: 540px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.3);
-  top: 442px;
-  left: -10px;
-  animation: scale 3s linear infinite;
-  z-index: -1;
+  display: none;
 }
 
-@keyframes scale {
-  0%,
-  100% {
-    transform: scaleX(1);
-  }
-  50% {
-    transform: scaleX(0.85);
-  }
-}
-
-/* Mobile first approach */
-body {
-  font-size: 16px;
-  padding: 10px;
-}
-
-/* Tablet screens (768px and up) */
-@media (min-width: 768px) {
-  body {
-    padding: 20px;
-  }
-}
-
-/* Desktop screens (1024px and up) */
-@media (min-width: 1024px) {
-  body {
-    padding: 40px;
-  }
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
