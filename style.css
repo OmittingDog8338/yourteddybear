@@ -138,6 +138,16 @@ body {
 
 .container {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .from-section {
@@ -443,4 +453,30 @@ body {
   50% {
     transform: scaleX(0.85);
   }
+}
+
+/* Mobile first approach */
+body {
+  font-size: 16px;
+  padding: 10px;
+}
+
+/* Tablet screens (768px and up) */
+@media (min-width: 768px) {
+  body {
+    padding: 20px;
+  }
+}
+
+/* Desktop screens (1024px and up) */
+@media (min-width: 1024px) {
+  body {
+    padding: 40px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
